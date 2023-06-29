@@ -4,7 +4,6 @@ pragma solidity 0.8.19;
 import "@openzeppelin/contracts-upgradeable/token/ERC721/IERC721Upgradeable.sol";
 import "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
 import "@openzeppelin/contracts-upgradeable/token/ERC721/extensions/ERC721EnumerableUpgradeable.sol";
-import "@openzeppelin/contracts-upgradeable/access/AccessControlUpgradeable.sol";
 // import "@openzeppelin/contracts-upgradeable/security/PausableUpgradeable.sol";
 import "@openzeppelin/contracts-upgradeable/utils/CountersUpgradeable.sol";
 import "@openzeppelin/contracts/utils/Strings.sol";
@@ -43,11 +42,6 @@ contract SelfkeyIdSoulboundNFT is ERC721EnumerableUpgradeable, OwnableUpgradeabl
     function setController(address _newController) public onlyOwner {
         controller = _newController;
         emit ControllerChanged(_newController);
-    }
-
-    function setBaseTokenUri(string memory _newUri) public onlyOwner {
-        _baseTokenURI = _newUri;
-        emit BaseTokenUriChanged(_newUri);
     }
 
     function setAuthorizationContractAddress(address _newAuthorizationContractAddress) public onlyOwner {
