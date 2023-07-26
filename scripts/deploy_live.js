@@ -5,8 +5,8 @@ async function main() {
     console.log("Deploying contracts with the account:", deployer.address);
 
      // FIXME: change for live mode
-     const authorizationContract = "0x1e4BBcF6c10182C03c66bDA5BE6E04509bE1160F";
-     const base_uri = 'https://selfkey-org-service-staging-dsf3f7lktq-ew.a.run.app/avatar/metadata/';
+     const authorizationContract = "0x29a51eba5470E52586e8CB13c6E284AdD567dDB2";
+     const base_uri = 'https://service.selfkey.org/avatar/metadata/';
 
      const contractFactory = await hre.ethers.getContractFactory("SelfkeyIdSoulboundNFT");
      const contract = await upgrades.deployProxy(contractFactory, ['Selfkey ID Soulbound NFT', 'SKIDNFT', base_uri, authorizationContract]);
