@@ -1,7 +1,7 @@
-# Selfkey Soul bound token NFT (ERC721) contract
+# Selfkey ID Soul Bound NFT Token (ERC721) Contract
 
 ## Overview
-
+Selfkey ID soulbound NFT token (SBT NFT)
 
 ## Development
 
@@ -20,12 +20,6 @@ All smart contracts are implemented in Solidity `^0.8.19`, using [Hardhat](https
 
     `npx hardhat test`
 
-### Deploy
-
-    `npx hardhat run scripts/deploy.js --network mumbai`
-    `npx hardhat verify --network mumbai 0x0Ad5B4b01f56117fB480363117a951c12b231c03`
-
-
 ## API
 
 * `setAuthorizationContractAddress(address _newContractAddress)` _onlyOwners_: allows owners to change authorization contract address
@@ -38,4 +32,8 @@ All smart contracts are implemented in Solidity `^0.8.19`, using [Hardhat](https
 * `tokenOfOwnerByIndex(address owner, uint256 index)`: Returns token ID for owner by index
 * `mint(address to, bytes32 param, uint timestamp, address signer, bytes memory signature)`: Mints new token
 
-## Team
+## Contributing
+Please see the [contributing notes](CONTRIBUTING.md).
+
+## Copyright
+Copyright SelfKey DAO Foundation 2024. All rights reserved.
